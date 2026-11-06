@@ -28,4 +28,40 @@ campo_email.place(
     anchor="center"
 )
 
+campo_senha = ctk.CTkEntry(
+    janela,
+    width=677,
+    height=98,
+    font=("Arial", 20),
+    corner_radius=30,
+    fg_color="#EEEBEB",
+    text_color="#937D7D",
+    border_width=0,
+    placeholder_text="senha",
+    show="*"
+)
+campo_senha.place(
+    relx=0.5,
+    rely=0.6,
+    anchor="center"
+)
+
+botao_acessar = ctk.CTkButton(
+    janela,
+    width=677,
+    height=85,
+    corner_radius=30,
+    text="Acessar",
+    font=("Arial", 22),
+    fg_color="#298FC2",
+    hover_color="#8DBFD8",
+    text_color="white"
+)
+
+botao_acessar.place(
+    relx=0.5,
+    rely=0.72,
+    anchor="center"
+)
+
 janela.mainloop()
