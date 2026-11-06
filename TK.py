@@ -1,22 +1,31 @@
 import tkinter as tk
-from tkinter import ttk
+import customtkinter as ctk
 
-
-# Criando janela principal
 janela = tk.Tk()
-
-# Configurando a janela
 janela.title("Exemplo de Combobox")
 janela.geometry("1920x1080")
 janela.configure(bg="white")
 
-# Carregar Imagem
 imagem = tk.PhotoImage(file="img/Logo.png")
-
-# Criando componente para a logo
 logo = tk.Label(janela, image=imagem, bg="white")
+logo.place(relx=0.5, rely=0.236, anchor="center")
 
-#posicionando a logo
-logo.place(relx=0.5, rely=0.167, anchor="center")
+campo_email = ctk.CTkEntry(
+    janela,
+    width=677,
+    height=98,
+    font=("Arial", 20),
+    corner_radius=30,
+    fg_color="#EEEBEB",
+    text_color="#937D7D",
+    border_width=0,
+    placeholder_text="e-mail"
+)
+
+campo_email.place(
+    relx=0.5,
+    rely=0.465,
+    anchor="center"
+)
 
 janela.mainloop()
