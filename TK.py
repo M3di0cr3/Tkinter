@@ -17,7 +17,6 @@ def acessar():
     tela_principal.pack(fill="both", expand=True)
 
 #----Primeira tela----
-
 imagem = tk.PhotoImage(file="img/Logo.png")
 logo = tk.Label(tela_login, image=imagem, bg="white")
 logo.place(relx=0.5, rely=0.236, anchor="center")
@@ -93,12 +92,23 @@ primeiro_acesso.place(
 
 
 #----Segunda tela----
-titulo = ctk.CTkLabel(
+circulo = ctk.CTkLabel(
     tela_principal,
-    text="Bem-vindo!",
-    font=("Arial", 30),
-    text_color="#298FC2"
+    width=90,
+    height=94,
+    corner_radius=50,
+    fg_color="#298FC2"
+)
+circulo.place( x= 50, y= 50)
+
+
+imagem_perfil = tk.PhotoImage(file="img/Profile.png")
+perfil = tk.Label(circulo, image=imagem_perfil, bg="#298FC2", borderwidth=0)
+perfil.place(
+    relx=0.5,
+    y=0.5,
+    anchor="center"
 )
 
-titulo.place(relx=0.5, rely=0.5, anchor="center")
 janela.mainloop()
+
