@@ -6,9 +6,11 @@ janela.title("Exemplo de Combobox")
 janela.geometry("1920x1080")
 janela.configure(bg="white")
 
+
 imagem = tk.PhotoImage(file="img/Logo.png")
 logo = tk.Label(janela, image=imagem, bg="white")
 logo.place(relx=0.5, rely=0.236, anchor="center")
+
 
 campo_email = ctk.CTkEntry(
     janela,
@@ -21,12 +23,12 @@ campo_email = ctk.CTkEntry(
     border_width=0,
     placeholder_text="e-mail"
 )
-
 campo_email.place(
     relx=0.5,
     rely=0.465,
     anchor="center"
 )
+
 
 campo_senha = ctk.CTkEntry(
     janela,
@@ -46,6 +48,7 @@ campo_senha.place(
     anchor="center"
 )
 
+
 botao_acessar = ctk.CTkButton(
     janela,
     width=677,
@@ -57,10 +60,22 @@ botao_acessar = ctk.CTkButton(
     hover_color="#8DBFD8",
     text_color="white"
 )
-
 botao_acessar.place(
     relx=0.5,
     rely=0.72,
+    anchor="center"
+)
+
+
+primeiro_acesso = ctk.CTkLabel(
+    janela,
+    text="Primeiro acesso?",
+    font=("Arial", 18),
+    text_color="#937D7D"
+)
+primeiro_acesso.place(
+    relx=0.5,
+    rely=0.80,
     anchor="center"
 )
 
