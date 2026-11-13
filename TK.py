@@ -1,6 +1,5 @@
 import tkinter as tk
-import customtkinter as ctk
-
+import customtkinter as ctk 
 
 #----Janela----
 janela = ctk.CTk()
@@ -21,7 +20,6 @@ imagem = tk.PhotoImage(file="img/Logo.png")
 logo = tk.Label(tela_login, image=imagem, bg="white")
 logo.place(relx=0.5, rely=0.236, anchor="center")
 
-
 campo_email = ctk.CTkEntry(
     tela_login,
     width=677,
@@ -38,7 +36,6 @@ campo_email.place(
     rely=0.465,
     anchor="center"
 )
-
 
 campo_senha = ctk.CTkEntry(
     tela_login,
@@ -58,7 +55,6 @@ campo_senha.place(
     anchor="center"
 )
 
-
 botao_acessar = ctk.CTkButton(
     tela_login,
     width=677,
@@ -77,7 +73,6 @@ botao_acessar.place(
     anchor="center"
 )
 
-
 primeiro_acesso = ctk.CTkLabel(
     tela_login,
     text="Primeiro acesso?",
@@ -92,23 +87,28 @@ primeiro_acesso.place(
 
 
 #----Segunda tela----
-circulo = ctk.CTkLabel(
-    tela_principal,
-    width=90,
-    height=94,
-    corner_radius=50,
-    fg_color="#298FC2"
-)
-circulo.place( x= 50, y= 50)
 
-
-imagem_perfil = tk.PhotoImage(file="img/Profile.png")
-perfil = tk.Label(circulo, image=imagem_perfil, bg="#298FC2", borderwidth=0)
+imagem_perfil = tk.PhotoImage(file="img/Avatar.png")
+perfil = tk.Label(tela_principal, image=imagem_perfil, bg="white", borderwidth=0)
 perfil.place(
-    relx=0.5,
-    y=0.5,
-    anchor="center"
+    x=50,
+    y=50,
+)
+
+bem_vindo = ctk.CTkLabel(
+    tela_principal,
+    width=241,
+    height=62,
+    corner_radius=30,
+    border_width=0,
+    font=("Arial", 20),
+    fg_color="#CAE8F7",
+    text_color="#298FC2",
+    text="Bem-vindo(a)!"
+)
+bem_vindo.place(
+    x=170,
+    y=63,
 )
 
 janela.mainloop()
-
